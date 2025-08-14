@@ -1,12 +1,10 @@
 
 package parcial1;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 import org.apache.logging.log4j.LogManager;
@@ -22,16 +20,61 @@ import parcial1.model.trader;
 import parcial1.model.transaccion;
 import parcial1.service.TransactionProcessor;
 
+
 public class App {
 
     private static final Logger logger = LogManager.getLogger(App.class.getName());
 
+    // --- Clases para serialización JSON ---
+    private static class ReporteHolding {
+        String symbol;
+        double cantidad;
+        ReporteHolding(String symbol, double cantidad) {
+            this.symbol = symbol;
+            this.cantidad = cantidad;
+        }
+    }
+    private static class ReporteTransaccion {
+        String tipo;
+        String symbol;
+        double precio;
+        double cantidad;
+        ReporteTransaccion(parcial1.model.transaccion tx) {
+            this.tipo = tx.getType().toString();
+            this.symbol = tx.getSymbol();
+            this.precio = tx.getPriceUsd();
+            this.cantidad = tx.getQuantity();
+        }
+    }
+    private static class ReporteTrader {
+        String nombre;
+        double saldo_cop;
+        ReporteHolding[] portafolio;
+        ReporteTransaccion[] transacciones;
+        ReporteTrader(trader t) {
+            this.nombre = t.getname();
+            this.saldo_cop = t.getBalance();
+            int n = t.getWallet().size();
+            ReporteHolding[] arr = new ReporteHolding[n];
+            int i = 0;
+            for (Object h : t.getWallet()) {
+                parcial1.model.holding hold = (parcial1.model.holding) h;
+                arr[i++] = new ReporteHolding(hold.getSymbol(), hold.getQuantity());
+            }
+            this.portafolio = arr;
+            // Serializar el stack de transacciones como arreglo
+            Object[] histArr = t.getHistory().toArray();
+            ReporteTransaccion[] txArr = new ReporteTransaccion[histArr.length];
+            for (int j = 0; j < histArr.length; j++) {
+                parcial1.model.transaccion tx = (parcial1.model.transaccion) histArr[j];
+                txArr[j] = new ReporteTransaccion(tx);
+            }
+            this.transacciones = txArr;
+        }
+    }
+
     public static void main(String[] args) {
-
-
-
         try {
-
             logger.info("Iniciando simulación de mercado de criptomonedas");
             ApiCripto api = new ApiCripto("https://api.coinlore.net/api/tickers/");
             logger.info("Creando instancia de ApiCripto");
@@ -88,41 +131,30 @@ public class App {
                 System.out.println();
             }
 
+            // --- Generar reporte_final.json usando solo arreglos y buffer ---
             try {
-                ArrayList<Map<String, Object>> reporte = new ArrayList<>();
-                for (trader t : traders) {
-                    Map<String, Object> traderInfo = new HashMap<>();
-                    traderInfo.put("nombre", t.getname());
-                    traderInfo.put("saldo_cop", t.getBalance());
-                    traderInfo.put("transacciones", t.getHistory());
-                    ArrayList<Map<String, Object>> portafolio = new ArrayList<>();
-                    t.getWallet().forEach(holding -> {
-                        Map<String, Object> h = new HashMap<>();
-                        h.put("symbol", holding.getSymbol());
-                        h.put("cantidad", holding.getQuantity());
-                        portafolio.add(h);
-                    });
-                    traderInfo.put("portafolio", portafolio);
-                    reporte.add(traderInfo);
+                ReporteTrader[] reporte = new ReporteTrader[traders.length];
+                for (int i = 0; i < traders.length; i++) {
+                    reporte[i] = new ReporteTrader(traders[i]);
                 }
-                Map<String, Object> resumen = new HashMap<>();
-                resumen.put("reporte_final", reporte);
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();
-                try (FileWriter writer = new FileWriter("reporte_final.json")) {
-                    gson.toJson(resumen, writer);
+                String json = gson.toJson(reporte);
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter("reporte_final.json"))) {
+                    writer.write(json);
                 }
                 logger.info("Archivo reporte_final.json generado correctamente");
             } catch (IOException e) {
                 logger.error("Error generando reporte_final.json: " + e.getMessage(), e);
             }
-            
 
         } catch (Exception e) { 
             logger.error("Error en la simulación: " + e.getMessage(),e);
             System.out.println("Ocurrió un error en la simulación: " + e.getMessage());
         }
+    }
+
         
-        }
+        
     
 
     private static criptoMoneda[] pick10Random(List<criptoMoneda> lista) {
@@ -148,7 +180,9 @@ public class App {
                 logger.error("Error actualizando precio de " + c.getSymbol() + ": " + e.getMessage(),e);
             }
         }
+    
     }
+    
 
     private static void createRandomOrder(trader t, criptoMoneda[] coins, orderBook book, Random rnd) {
         criptoMoneda coin = coins[rnd.nextInt(coins.length)];

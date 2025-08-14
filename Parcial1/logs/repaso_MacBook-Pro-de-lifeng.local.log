@@ -495,3 +495,331 @@ java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en po
 2025-08-13 20:57:21 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob buy 0.05620264698762322 STETH
 2025-08-13 20:57:21 [main] INFO  parcial1.App - === FIN SIMULACIÓN ===
 2025-08-13 20:57:21 [main] INFO  parcial1.App - Archivo reporte_final.json generado correctamente
+2025-08-13 22:12:55 [main] INFO  parcial1.App - Iniciando simulación de mercado de criptomonedas
+2025-08-13 22:12:55 [main] INFO  parcial1.App - Creando instancia de ApiCripto
+2025-08-13 22:12:56 [main] INFO  parcial1.model.ApiCripto - Criptomonedas obtenidas correctamente desde la API
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Lista de criptomonedas obtenida. Total: 100
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Se seleccionaron 10 criptomonedas aleatorias para la simulación
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Traders creados: Alice y Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - OrderBook y TransactionProcessor inicializados
+2025-08-13 22:12:56 [main] INFO  parcial1.App - === INICIANDO SIMULACIÓN ===
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 1 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 1
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 1
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.03432233058255682 de JASMY
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.03432233058255682 JASMY
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.027044362202506306 de JASMY
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob buy 0.027044362202506306 JASMY
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 2 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 2
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 2
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.03799975772397016 de KAS
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.03799975772397016 KAS
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:76)
+2025-08-13 22:12:56 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.07718763060152625 WLD
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 3 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 3
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 3
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:76)
+2025-08-13 22:12:56 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Alice sell 0.038193148788060086 MNT
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:76)
+2025-08-13 22:12:56 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.022381672325753048 MIOTA
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 4 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 4
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 4
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.06462855421356405 de SUI
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.06462855421356405 SUI
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.09426222661513887 de MIOTA
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob buy 0.09426222661513887 MIOTA
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 5 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 5
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 5
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.0496176980169407 de MIOTA
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.0496176980169407 MIOTA
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:76)
+2025-08-13 22:12:56 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.01891708365647833 IP
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 6 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 6
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 6
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.05662871615381101 de LEO
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.05662871615381101 LEO
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:76)
+2025-08-13 22:12:56 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.08279022153808918 PAXG
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 7 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 7
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 7
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.07844538478593552 de KAS
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.07844538478593552 KAS
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.10452230839856534 de MIOTA
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob buy 0.10452230839856534 MIOTA
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 8 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 8
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 8
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:76)
+2025-08-13 22:12:56 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Alice sell 0.089855840283668 PAXG
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Compra realizada: 0.07765325164715553 de PAXG
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob buy 0.07765325164715553 PAXG
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 9 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 9
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 9
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:76)
+2025-08-13 22:12:56 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Alice sell 0.028653360412296713 WLD
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:12:56 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:76)
+2025-08-13 22:12:56 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.08783805921113003 KAS
+2025-08-13 22:12:56 [main] INFO  parcial1.App - 
+--- TURNO 10 ---
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 10
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Procesando órdenes del turno 10
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Venta realizada: 0.03717186862794848 de SUI
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice sell 0.03717186862794848 SUI
+2025-08-13 22:12:56 [main] INFO  parcial1.model.trader - Venta realizada: 0.06293813434609967 de MIOTA
+2025-08-13 22:12:56 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob sell 0.06293813434609967 MIOTA
+2025-08-13 22:12:56 [main] INFO  parcial1.App - === FIN SIMULACIÓN ===
+2025-08-13 22:12:56 [main] INFO  parcial1.App - Archivo reporte_final.json generado correctamente
+2025-08-13 22:18:49 [main] INFO  parcial1.App - Iniciando simulación de mercado de criptomonedas
+2025-08-13 22:18:49 [main] INFO  parcial1.App - Creando instancia de ApiCripto
+2025-08-13 22:18:49 [main] INFO  parcial1.model.ApiCripto - Criptomonedas obtenidas correctamente desde la API
+2025-08-13 22:18:49 [main] INFO  parcial1.App - Lista de criptomonedas obtenida. Total: 100
+2025-08-13 22:18:49 [main] INFO  parcial1.App - Se seleccionaron 10 criptomonedas aleatorias para la simulación
+2025-08-13 22:18:49 [main] INFO  parcial1.App - Traders creados: Alice y Bob
+2025-08-13 22:18:49 [main] INFO  parcial1.App - OrderBook y TransactionProcessor inicializados
+2025-08-13 22:18:49 [main] INFO  parcial1.App - === INICIANDO SIMULACIÓN ===
+2025-08-13 22:18:49 [main] INFO  parcial1.App - 
+--- TURNO 1 ---
+2025-08-13 22:18:49 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 1
+2025-08-13 22:18:49 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 1
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Alice sell 0.0556715658998724 NEAR
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Compra realizada: 0.09282278356288225 de WETH
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob buy 0.09282278356288225 WETH
+2025-08-13 22:18:50 [main] INFO  parcial1.App - 
+--- TURNO 2 ---
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 2
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 2
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Alice sell 0.08192861173388769 ETH
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Venta realizada: 0.0626328290040788 de WETH
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob sell 0.0626328290040788 WETH
+2025-08-13 22:18:50 [main] INFO  parcial1.App - 
+--- TURNO 3 ---
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 3
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 3
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Alice sell 0.029689853562330455 METH
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Compra realizada: 0.04025097392543928 de WIF
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob buy 0.04025097392543928 WIF
+2025-08-13 22:18:50 [main] INFO  parcial1.App - 
+--- TURNO 4 ---
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 4
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 4
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Compra realizada: 0.10023161340787866 de METH
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.10023161340787866 METH
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Compra realizada: 0.09915856101576258 de WIF
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob buy 0.09915856101576258 WIF
+2025-08-13 22:18:50 [main] INFO  parcial1.App - 
+--- TURNO 5 ---
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 5
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 5
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Compra realizada: 0.03688768479511815 de NEAR
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.03688768479511815 NEAR
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.04139041025498925 ETH
+2025-08-13 22:18:50 [main] INFO  parcial1.App - 
+--- TURNO 6 ---
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 6
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 6
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Compra realizada: 0.07621221483076494 de JITOSOL
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.07621221483076494 JITOSOL
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Venta realizada: 0.10908302977624855 de WIF
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Bob sell 0.10908302977624855 WIF
+2025-08-13 22:18:50 [main] INFO  parcial1.App - 
+--- TURNO 7 ---
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 7
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 7
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Compra realizada: 0.07441478741838688 de AERO
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.07441478741838688 AERO
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.02836314494535263 SPX
+2025-08-13 22:18:50 [main] INFO  parcial1.App - 
+--- TURNO 8 ---
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 8
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 8
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Alice sell 0.10635813401776877 LDO
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.07321076322145359 SPX
+2025-08-13 22:18:50 [main] INFO  parcial1.App - 
+--- TURNO 9 ---
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 9
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 9
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Alice sell 0.04754703625411454 NEAR
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.08127655147054093 WETH
+2025-08-13 22:18:50 [main] INFO  parcial1.App - 
+--- TURNO 10 ---
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Precios de criptomonedas fluctuados para el turno 10
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Alice
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Creando orden aleatoria para trader: Bob
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Procesando órdenes del turno 10
+2025-08-13 22:18:50 [main] INFO  parcial1.model.trader - Compra realizada: 0.08864570332512749 de LDO
+2025-08-13 22:18:50 [main] INFO  parcial1.service.TransactionProcessor - Transacción procesada: Alice buy 0.08864570332512749 LDO
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Venta inválida: cantidad insuficiente en portafolio
+2025-08-13 22:18:50 [main] ERROR parcial1.model.trader - Error en venta: Venta inválida: cantidad insuficiente en portafolio
+java.lang.IllegalArgumentException: Venta inválida: cantidad insuficiente en portafolio
+	at parcial1.model.trader.sell(trader.java:97)
+	at parcial1.model.trader.sell(trader.java:50)
+	at parcial1.service.TransactionProcessor.processOrder(TransactionProcessor.java:38)
+	at parcial1.App.main(App.java:120)
+2025-08-13 22:18:50 [main] ERROR parcial1.service.TransactionProcessor - Transacción falló: Bob sell 0.04103896284464798 METH
+2025-08-13 22:18:50 [main] INFO  parcial1.App - === FIN SIMULACIÓN ===
+2025-08-13 22:18:50 [main] INFO  parcial1.App - Archivo reporte_final.json generado correctamente
