@@ -25,7 +25,7 @@ public class App {
 
     private static final Logger logger = LogManager.getLogger(App.class.getName());
 
-    // --- Clases para serialización JSON ---
+    // Clases creadas para la serialización JSON 
     private static class ReporteHolding {
         String symbol;
         double cantidad;
@@ -131,7 +131,7 @@ public class App {
                 System.out.println();
             }
 
-            // --- Generar reporte_final.json usando solo arreglos y buffer ---
+        
             try {
                 ReporteTrader[] reporte = new ReporteTrader[traders.length];
                 for (int i = 0; i < traders.length; i++) {
