@@ -22,6 +22,12 @@ public class transaccion {
 
     }
 
+    public String getTraderId() { return traderId; }
+    public String getSymbol() { return symbol; }
+    public double getPriceUsd() { return priceUsd; }
+    public double getQuantity() { return quantity; }
+    public Type getType() { return type; }
+
     @Override
 
     public String toString(){

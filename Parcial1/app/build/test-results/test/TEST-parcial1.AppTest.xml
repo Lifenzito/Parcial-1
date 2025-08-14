@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="parcial1.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-08-14T01:43:30" hostname="MacBook-Pro-de-lifeng.local" time="0.12">
+  <properties/>
+  <testcase name="testCompraSaldoInsuficiente()" classname="parcial1.AppTest" time="0.12"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[2025-08-14T01:43:30.403144Z Test worker INFO Starting configuration XmlConfiguration[location=/Users/lifenzito/Documents/CuartoSemestre/DatosAlgoritmos/Parcial1/app/build/resources/main/log4j2.xml, lastModified=2025-08-14T01:37:42.164Z]...
+2025-08-14T01:43:30.404158Z Test worker INFO Configuration XmlConfiguration[location=/Users/lifenzito/Documents/CuartoSemestre/DatosAlgoritmos/Parcial1/app/build/resources/main/log4j2.xml, lastModified=2025-08-14T01:37:42.164Z] started.
+2025-08-14T01:43:30.404913Z Test worker INFO Stopping configuration org.apache.logging.log4j.core.config.DefaultConfiguration@1e636ea3...
+2025-08-14T01:43:30.405144Z Test worker INFO Configuration org.apache.logging.log4j.core.config.DefaultConfiguration@1e636ea3 stopped.
+]]></system-err>
+</testsuite>

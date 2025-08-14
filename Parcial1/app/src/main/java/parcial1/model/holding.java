@@ -1,6 +1,5 @@
 package parcial1.model;
 
-import org.checkerframework.checker.units.qual.s;
 
 public class holding {
 

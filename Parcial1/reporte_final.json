@@ -1,0 +1,121 @@
+{
+  "reporte_final": [
+    {
+      "saldo_cop": 4821365.082191024,
+      "portafolio": [
+        {
+          "symbol": "SOL",
+          "cantidad": 0.19372636486039735
+        },
+        {
+          "symbol": "HYPE",
+          "cantidad": 0.10813124367470378
+        }
+      ],
+      "transacciones": [
+        {
+          "traderId": "u1",
+          "symbol": "HYPE",
+          "priceUsd": 49.639564,
+          "quantity": 0.028638813509064803,
+          "type": "buy"
+        },
+        {
+          "traderId": "u1",
+          "symbol": "SOL",
+          "priceUsd": 199.150576,
+          "quantity": 0.06775488108843945,
+          "type": "buy"
+        },
+        {
+          "traderId": "u1",
+          "symbol": "HYPE",
+          "priceUsd": 52.641844,
+          "quantity": 0.07949243016563898,
+          "type": "buy"
+        },
+        {
+          "traderId": "u1",
+          "symbol": "SOL",
+          "priceUsd": 202.725584,
+          "quantity": 0.10008954316251406,
+          "type": "buy"
+        },
+        {
+          "traderId": "u1",
+          "symbol": "SOL",
+          "priceUsd": 203.553069,
+          "quantity": 0.025881940609443835,
+          "type": "buy"
+        }
+      ],
+      "nombre": "Alice"
+    },
+    {
+      "saldo_cop": 6845925.961323333,
+      "portafolio": [
+        {
+          "symbol": "SUI",
+          "cantidad": 0.10919542220943022
+        },
+        {
+          "symbol": "STETH",
+          "cantidad": 0.05620264698762322
+        },
+        {
+          "symbol": "HYPE",
+          "cantidad": 0.1450269553515962
+        },
+        {
+          "symbol": "SOL",
+          "cantidad": 0.06209521606481876
+        }
+      ],
+      "transacciones": [
+        {
+          "traderId": "u2",
+          "symbol": "SOL",
+          "priceUsd": 194.032524,
+          "quantity": 0.027784962139541992,
+          "type": "buy"
+        },
+        {
+          "traderId": "u2",
+          "symbol": "HYPE",
+          "priceUsd": 54.742266,
+          "quantity": 0.06252904325007165,
+          "type": "buy"
+        },
+        {
+          "traderId": "u2",
+          "symbol": "HYPE",
+          "priceUsd": 52.641844,
+          "quantity": 0.08249791210152457,
+          "type": "buy"
+        },
+        {
+          "traderId": "u2",
+          "symbol": "SUI",
+          "priceUsd": 3.847283,
+          "quantity": 0.10919542220943022,
+          "type": "buy"
+        },
+        {
+          "traderId": "u2",
+          "symbol": "SOL",
+          "priceUsd": 203.553069,
+          "quantity": 0.03431025392527677,
+          "type": "buy"
+        },
+        {
+          "traderId": "u2",
+          "symbol": "STETH",
+          "priceUsd": 4767.701359,
+          "quantity": 0.05620264698762322,
+          "type": "buy"
+        }
+      ],
+      "nombre": "Bob"
+    }
+  ]
+}

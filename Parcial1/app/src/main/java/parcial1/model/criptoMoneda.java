@@ -9,7 +9,6 @@ public class criptoMoneda  {
     private String name;
     private String price_usd;
 
-    // Getters y setters
     public String getId() {
         return id;
     }
